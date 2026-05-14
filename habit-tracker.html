@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreakMaster Pro | Habit Tracker</title>
+  <link rel="stylesheet" href="HabitTracker.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>✨ StreakMaster Pro</h1>
+            <div class="subtitle">Build habits. Never break the chain.</div>
+        </div>
+
+        <!-- Add Habit Section -->
+        <div class="card">
+            <div class="card-title">📌 Create New Habit</div>
+            <div class="input-group">
+                <input type="text" id="habitName" placeholder="e.g., Morning Run, Read 30min, Meditate" autocomplete="off">
+                <button class="btn btn-primary" id="addHabitBtn">+ Add Habit</button>
+            </div>
+        </div>
+
+        <!-- Statistics Section -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value" id="totalHabits">0</div>
+                <div class="stat-label">Total Habits</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="completedToday">0</div>
+                <div class="stat-label">✅ Completed Today</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="bestStreak">0</div>
+                <div class="stat-label">🏆 Best Streak</div>
+            </div>
+        </div>
+
+        <!-- Habits List Section -->
+        <div class="card">
+            <div class="card-title">📋 Active Habits</div>
+            <div id="habitsList" class="habit-list"></div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="button-group">
+            <button class="btn btn-warning" id="resetDayBtn">🔄 Reset Today</button>
+            <button class="btn btn-danger" id="clearAllBtn">🗑️ Clear All Habits</button>
+        </div>
+
+        <div class="footer">
+            💡 Click on any habit to mark it complete for today<br>
+            🔥 Streaks count consecutive days of completion
+        </div>
+    </div>
+<script src="habitTracker.js"></script>
+</body>
+</html>
